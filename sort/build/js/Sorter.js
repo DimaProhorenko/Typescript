@@ -4,12 +4,12 @@ class Sorter {
     constructor(collection) {
         this._collection = collection;
     }
-    getCollection() {
+    get collection() {
         return this._collection;
     }
     sort() {
         for (let i = 0; i < this._collection.length; i++) {
-            for (let j = 0; j < this._collection.length - i; j++) {
+            for (let j = 0; j < this._collection.length - i - 1; j++) {
                 if (this._collection.compare(j)) {
                     this._collection.swap(j);
                 }

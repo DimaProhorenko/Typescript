@@ -1,5 +1,6 @@
 import NumberCollection from './NumberCollection';
 import Sorter from './Sorter';
+import Str from './Str';
 // class Sorter {
 // 	private _collection: number[];
 
@@ -30,8 +31,9 @@ import Sorter from './Sorter';
 // }
 
 const arr = new NumberCollection([5, 2, 23, 14, 1, 4, -4]);
-const sorter = new Sorter(arr);
+const simpleString = new Str('Xaayb');
+const sorter = new Sorter(simpleString);
 
 sorter.sort();
 
-console.log(sorter.getCollection());
+console.log(sorter.collection);
