@@ -12,8 +12,7 @@ ll.add(345);
 ll.add(-32);
 const arr = new NumberCollection([5, 2, 23, 14, 1, 4, -4]);
 const simpleString = new Str('Xaayb');
-const sorter = new Sorter(ll);
 
-sorter.sort();
+simpleString.sort();
 
-ll.print();
+console.log(simpleString);

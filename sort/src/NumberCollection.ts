@@ -1,12 +1,13 @@
-import { Sortable } from './Sorter';
+import Sorter from './Sorter';
 
-class NumberCollection implements Sortable {
+class NumberCollection extends Sorter {
 	collection: number[];
 	length: number;
 
 	constructor(collection: number[]) {
+		super();
 		this.collection = collection;
-		this.length = this.collection.length;
+		this.length = collection.length;
 	}
 
 	compare(j: number): boolean {

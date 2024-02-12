@@ -1,4 +1,4 @@
-import { Sortable } from './Sorter';
+import Sorter from './Sorter';
 
 class SimpleNode {
 	next: SimpleNode | null = null;
@@ -6,7 +6,7 @@ class SimpleNode {
 	constructor(public data: number) {}
 }
 
-class LinkedList implements Sortable {
+class LinkedList extends Sorter {
 	head: SimpleNode | null = null;
 	length = 0;
 

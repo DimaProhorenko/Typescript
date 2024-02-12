@@ -4,22 +4,19 @@ export interface Sortable {
 	swap: (j: number) => void;
 }
 
-class Sorter {
-	private _collection: Sortable;
+abstract class Sorter {
+	abstract compare(index: number): boolean;
 
-	constructor(collection: Sortable) {
-		this._collection = collection;
-	}
+	abstract swap(index: number): void;
 
-	get collection(): Sortable {
-		return this._collection;
-	}
+	abstract length: number;
 
 	sort(): void {
-		for (let i = 0; i < this._collection.length; i++) {
-			for (let j = 0; j < this._collection.length - i - 1; j++) {
-				if (this._collection.compare(j)) {
-					this._collection.swap(j);
+		const { length } = this;
+		for (let i = 0; i < length; i++) {
+			for (let j = 0; j < length - i - 1; j++) {
+				if (this.compare(j)) {
+					this.swap(j);
 				}
 			}
 		}

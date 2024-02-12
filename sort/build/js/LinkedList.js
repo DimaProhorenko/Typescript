@@ -1,13 +1,18 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
+const Sorter_1 = __importDefault(require("./Sorter"));
 class SimpleNode {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-class LinkedList {
+class LinkedList extends Sorter_1.default {
     constructor() {
+        super(...arguments);
         this.head = null;
         this.length = 0;
     }
