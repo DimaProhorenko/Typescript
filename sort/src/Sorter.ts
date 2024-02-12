@@ -1,5 +1,4 @@
 export interface Sortable {
-	collection: number[] | string;
 	length: number;
 	compare: (j: number) => boolean;
 	swap: (j: number) => void;

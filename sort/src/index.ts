@@ -1,39 +1,19 @@
+import LinkedList from './LinkedList';
 import NumberCollection from './NumberCollection';
 import Sorter from './Sorter';
 import Str from './Str';
-// class Sorter {
-// 	private _collection: number[];
 
-// 	constructor(collection: number[]) {
-// 		this._collection = collection;
-// 	}
-
-// 	sort(): void {
-// 		const { length } = this._collection;
-
-// 		for (let i = 0; i < length; i++) {
-// 			for (let j = i + 1; j < length - i; j++) {
-// 				if (this._collection[i] > this._collection[j]) {
-// 					const temp = this._collection[i];
-// 					this._collection[i] = this._collection[j];
-// 					this._collection[j] = temp;
-// 				}
-
-// 				if (typeof this._collection === 'string') {
-// 				}
-// 			}
-// 		}
-// 	}
-
-// 	getCollection(): number[] {
-// 		return this._collection;
-// 	}
-// }
-
+const ll = new LinkedList();
+ll.add(5);
+ll.add(10);
+ll.add(3);
+ll.add(-5);
+ll.add(345);
+ll.add(-32);
 const arr = new NumberCollection([5, 2, 23, 14, 1, 4, -4]);
 const simpleString = new Str('Xaayb');
-const sorter = new Sorter(simpleString);
+const sorter = new Sorter(ll);
 
 sorter.sort();
 
-console.log(sorter.collection);
+ll.print();
